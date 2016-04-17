@@ -4,7 +4,7 @@ var fs = require('fs');
 var data = JSON.stringify({
     "systemsTraceAuditNumber" : "451001",
     "retrievalReferenceNumber" : "330000550000",
-    "localTransactionDateTime" : "2016-04-17T04:18:00",
+    "localTransactionDateTime" : "2016-04-17T04:33:00",
     "acquiringBin" : "408999",
     "acquirerCountryCode" : "840",
     "senderPrimaryAccountNumber" : "4005520000011126",
@@ -37,7 +37,7 @@ var certificateFile ='cert.pem';
 
 var appRouter = function(app) {
   app.get("/", function(req, res) {
-    res.send("Hello World");
+    res.send("Local Visa Market");
   });
 
   app.get("/visa", function(requ, res) {
@@ -60,13 +60,12 @@ var appRouter = function(app) {
             console.log(item + ": " + response.headers[item]);
           }
           console.log("Body: "+ body);
+          res.send(body);
         } else {
           console.log("Got error: " + error.message);
         }
       }
     );
-
-    res.send("Hello World");
   });
 
   app.get("/account", function(req, res) {
