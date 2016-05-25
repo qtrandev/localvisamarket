@@ -37,7 +37,18 @@ var certificateFile ='cert.pem';
 
 var appRouter = function(app) {
   app.get("/", function(req, res) {
-    res.send("Local Visa Market");
+    res.send(
+      "Local Visa Market<br><br>" +
+      "Usage:<br><br>"+
+      "<a href='/'>/</a> : <br>"+
+      "Home<br><br>"+
+      "<a href='/account?username=qtrandev'>/account?username=qtrandev</a> : <br>"+
+      "Sample account information<br><br>"+
+      "<a href='/visa'>/visa</a> : <br>"+
+      "Send sample request to visa. Not working since .pem files not present.<br><br>"+
+      "<a href='/products'>/products</a> : <br>"+
+      "Sample list of products<br>"
+    );
   });
 
   app.get("/visa", function(requ, res) {
@@ -70,9 +81,9 @@ var appRouter = function(app) {
 
   app.get("/account", function(req, res) {
     var accountMock = {
-        "username": "nraboy",
+        "username": "qtrandev",
         "password": "1234",
-        "twitter": "@nraboy"
+        "twitter": "@qtrandev"
     }
     if(!req.query.username) {
         return res.send({"status": "error", "message": "missing username"});
@@ -89,6 +100,37 @@ var appRouter = function(app) {
     } else {
         return res.send(req.body);
     }
+  });
+  
+  app.get("/products", function(req, res) {
+    res.send(
+      [
+        {
+          id: '1',
+          productName: 'iPhone 6s Plus 64GB',
+          productDescription: 'The iPhone is an engineering marvel.',
+          productPrice: '$699',
+          productImage: 'http://www.qtrandev.com/thriftee/iphone.png',
+          sellerName: 'Zac Thomas'
+        },
+        {
+          id: '2',
+          productName: 'Nike Jordan',
+          productDescription: 'The best shoes money can buy.',
+          productPrice: '$149',
+          productImage: 'http://www.qtrandev.com/thriftee/nike.png',
+          sellerName: 'Michael Jardyn'
+        },
+        {
+          id: '3',
+          productName: 'Fixed Bike',
+          productDescription: 'Fixed-speed bikes are the best bikes for casual riding.',
+          productPrice: '$130',
+          productImage: 'http://www.qtrandev.com/thriftee/bike.png',
+          sellerName: 'Lance Sharapova'
+        }
+      ]
+    );
   });
 }
 
