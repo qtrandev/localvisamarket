@@ -107,27 +107,35 @@ var appRouter = function(app) {
       [
         {
           id: '4',
-          productName: 'Nexus 5X',
-          productDescription: 'The Nexus 5X is an engineering marvel.',
-          productPrice: '$699',
-          productImage: 'http://www.qtrandev.com/thriftee/laptop.png',
-          sellerName: 'Zac Thomas'
+          productName: 'Canon EOS 5D',
+          productDescription: 'Professional photography at a professional price.',
+          productPrice: '$450',
+          productImage: 'http://www.qtrandev.com/thriftee/canon.png',
+          sellerName: 'Peter Photon'
         },
         {
           id: '5',
-          productName: 'Nike Jordan',
-          productDescription: 'The best shoes money can buy.',
-          productPrice: '$149',
-          productImage: 'http://www.qtrandev.com/thriftee/nike.png',
-          sellerName: 'Michael Jardyn'
+          productName: 'Fitbit',
+          productDescription: 'Keep track of your health and sleep patterns.',
+          productPrice: '$129',
+          productImage: 'http://www.qtrandev.com/thriftee/fitbit.png',
+          sellerName: 'Michelle Jones'
         },
         {
           id: '6',
-          productName: 'Fixed Bike',
-          productDescription: 'Fixed-speed bikes are the best bikes for casual riding.',
-          productPrice: '$130',
-          productImage: 'http://www.qtrandev.com/thriftee/bike.png',
-          sellerName: 'Lance Sharapova'
+          productName: 'Skateboard',
+          productDescription: 'Best skateboard for grinding rails and doing flips.',
+          productPrice: '$120',
+          productImage: 'http://www.qtrandev.com/thriftee/skateboard.png',
+          sellerName: 'Tomey Hawk'
+        },
+        {
+          id: '7',
+          productName: 'Dell Laptop',
+          productDescription: 'The best affordable laptop in its class.',
+          productPrice: '$399',
+          productImage: 'http://www.qtrandev.com/thriftee/laptop.png',
+          sellerName: 'Danny Dunlop'
         }
       ]
     );
