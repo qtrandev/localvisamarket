@@ -38,7 +38,7 @@ var certificateFile ='cert.pem';
 var appRouter = function(app) {
   app.get("/", function(req, res) {
     res.send(
-      "Local Visa Market<br><br>" +
+      "<h2>Local Visa Market</h2><br>" +
       "Usage:<br><br>"+
       "<a href='/'>/</a> : <br>"+
       "Home<br><br>"+
@@ -106,15 +106,15 @@ var appRouter = function(app) {
     res.send(
       [
         {
-          id: '1',
-          productName: 'iPhone 6s Plus 64GB',
-          productDescription: 'The iPhone is an engineering marvel.',
+          id: '4',
+          productName: 'Nexus 5X',
+          productDescription: 'The Nexus 5X is an engineering marvel.',
           productPrice: '$699',
-          productImage: 'http://www.qtrandev.com/thriftee/iphone.png',
+          productImage: 'http://www.qtrandev.com/thriftee/laptop.png',
           sellerName: 'Zac Thomas'
         },
         {
-          id: '2',
+          id: '5',
           productName: 'Nike Jordan',
           productDescription: 'The best shoes money can buy.',
           productPrice: '$149',
@@ -122,7 +122,7 @@ var appRouter = function(app) {
           sellerName: 'Michael Jardyn'
         },
         {
-          id: '3',
+          id: '6',
           productName: 'Fixed Bike',
           productDescription: 'Fixed-speed bikes are the best bikes for casual riding.',
           productPrice: '$130',
